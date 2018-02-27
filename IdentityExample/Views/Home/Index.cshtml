@@ -1,0 +1,35 @@
+﻿@model IEnumerable<IdentityExample.Models.AppUser>
+@{
+
+    Layout = "_Layout";
+
+}
+<h2>Anasayfa</h2>
+
+<a href="/Home/YeniKullanici" class="btn btn-primary mb-3">KullanıcıEkle</a>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>İsim</th>
+        <th>Email</th>
+    </tr>
+    @if (Model.Count() == 0)
+    {
+        <tr>
+            <td colspan="3">Gösterilecek kayıt bulunmamaktadır</td>
+        </tr>
+    }
+    else
+    {
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.UserName</td>
+                <td>@item.Email</td>
+            </tr>
+        }
+
+    }
+
+</table>

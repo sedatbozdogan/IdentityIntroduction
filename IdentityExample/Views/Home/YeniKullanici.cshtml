@@ -1,0 +1,33 @@
+﻿@model IdentityExample.Models.YeniKullanici
+
+
+<h2>Yeni Kullanici</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="YeniKullanici" method="post">
+            <div class="form-group">
+                <label asp-for="KullaniciAd"></label>
+                <!-- Strongly type olarak Yeni Kullanıcı modeline ait Required property
+        kullanımı.DotNet Core ile gelen attribute tag'lar ile tanımlamalar
+        Standart Helper method'lar yerine gelmektedir. -->
+                <input asp-for="KullaniciAd" class="form-control" placeholder="Kullanıcı Adı" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" placeholder="Email" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Sifre"></label>
+                <input asp-for="Sifre" class="form-control" type="password" placeholder="****" />
+            </div>
+            <button type="submit" class="btn btn-primary">Kaydet</button>
+            <a href="/Home" class="btn btn-secondary">Vazgeç</a>
+        </form>
+
+    </div>
+    <div class="col-md-6">
+
+        <div asp-validation-summary="All" class="text-danger"></div>
+    </div>
+</div>
