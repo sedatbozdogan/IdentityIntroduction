@@ -1,2 +1,2 @@
-
-*.rb linguist-language=C#
+$ cat .gitattributes
+*.rb linguist-language= 
