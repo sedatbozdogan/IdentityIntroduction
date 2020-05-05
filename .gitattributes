@@ -1,2 +1,4 @@
 $ cat .gitattributes
 *.rb linguist-language=C#
+*.html linguist-detectable=false
+*.C# linguist-detectable=true
